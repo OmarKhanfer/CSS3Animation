@@ -1,0 +1,40 @@
+// ------------------------------------------
+// This file has styles for balloon image 
+//
+// author: omar.aljaber@gmail.com
+// ------------------------------------------
+
+// ------------------------------------------
+// table of contents (recommended):
+// ------------------------------------------
+// 1- Selectors
+//    * balloon
+// 2- Keyframe
+//    * keyframe balloon
+
+// 1- Selectors
+// ------------------------------------------
+	.balloon {
+		background: url('../images/balloon.png') no-repeat transparent;
+		height: 69px;
+		position:absolute;
+		top:-130px;
+		width: 49px;
+		z-index:300;
+		@include animation(balloonmove 15s infinite linear);
+		@include left(500px);
+		
+	}
+	
+//	2- Keyframe 
+// ------------------------------------------
+	@include keyframe(balloonmove) {
+		 0% {top:-140px;@include left(480px);@include rotate(0deg);}
+		15% {top:-180px;@include left(460px);@include rotate(-15deg);}
+		30% {top:-220px;@include left(480px);@include rotate(0deg);}
+		45% {top:-260px;@include left(500px);@include rotate(15deg);}
+		60% {top:-220px;@include left(520px);@include rotate(0deg);}
+		75% {top:-180px;@include left(530px);@include rotate(-15deg);}
+		90% {top:-160px;@include left(500px);@include rotate(0deg);}
+		100%{top:-140px;@include left(480px);@include rotate(0deg);}
+	}

@@ -1,0 +1,46 @@
+// ------------------------------------------
+// This file has styles for trees image 
+//
+// author: omar.aljaber@gmail.com
+// ------------------------------------------
+
+// ------------------------------------------
+// table of contents (recommended):
+// ------------------------------------------
+// 1- Variables
+//    * trees-height
+//    * trees-width
+// 2- Mixins
+//    * tree
+//
+// 3- Selectors
+//	  * first-trees
+//    * last-trees
+
+// 1- Variables
+	  $trees-height: 178px;
+	  $trees-width:436px;
+
+// 2- Mixins
+// ------------------------------------------
+	@mixin tree {
+		background:url('../images/trees.png') no-repeat transparent;
+		height:$trees-height;
+		position:absolute;
+		top:-100px;
+		width:$trees-width;
+		z-index:6;		
+	}
+	
+// 3- Selectors
+// ------------------------------------------
+	.first-trees {
+		@include tree;
+		@include right(10%);
+	}
+		
+	.last-trees {
+		@include tree;
+		@include left(13%);
+		@include rotateY(180deg);
+	}

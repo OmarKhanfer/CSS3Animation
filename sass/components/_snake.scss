@@ -1,0 +1,36 @@
+// ------------------------------------------
+// This file has styles for snake image 
+//
+// author: omar.aljaber@gmail.com
+// ------------------------------------------
+
+// ------------------------------------------
+// table of contents (recommended):
+// ------------------------------------------
+// 1- Selectors
+//	  * snake
+// 2- Keyframe
+//    * keyframe snakemove
+
+// 1- Selectors
+// ------------------------------------------
+.snake {
+	background:url('../images/snake.png');
+	height:188px;
+	position:absolute;
+	top:100px;
+	width:188px;
+	z-index:17;
+	@include animation(snakemove 8s infinite linear);
+	@include left(24%);
+	
+}
+
+
+// 2- Keyframe
+// ------------------------------------------
+@include keyframe(snakemove) {
+    0% {@include rotate(0deg);}    
+    100% {@include rotate(360deg);}
+
+}

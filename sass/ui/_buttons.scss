@@ -1,0 +1,81 @@
+// ------------------------------------------
+// This file has styles for button control 
+//
+// author: omar.aljaber@gmail.com
+// ------------------------------------------
+
+// ------------------------------------------
+// table of contents (recommended):
+// ------------------------------------------
+// 1- Variables
+// 2- Mixins
+// 3- Selectors
+
+// 1- Variables
+// ------------------------------------------
+
+// 2- Mixins
+// ------------------------------------------
+	@mixin base-button {
+		border:1px solid;
+		color:#fff;
+		display:block;
+		font-family:milonga;
+		font-size:17px;
+		margin:10px 35px;
+		padding:7px 10px;
+		text-align:center;
+		text-shadow:0 1px rgba(#9f2d42,.6);
+		@include border-radius(5px);
+		
+		&:hover,&:active {
+			cursor:pointer;
+		}
+		
+		&:active {
+			color:#eee;
+			padding:7px 11px 7px 9px;
+			@include box-shadow(inset 0 0 7px rgba(#000,.7));
+			
+		}
+	}
+	
+	@mixin menu-button {
+		border:1px solid #340b0b;
+		color:#fff;
+		display:inline;
+		padding:5px 10px;
+		
+		@include background(linear-gradient(#942a31,#b15653));
+		@include box-shadow(inset 0 0 1px rgba(#fff,.5),1px 1px 0 rgba(#942a31,.5),0 1px 0 rgba(#fff,.7));
+		&:hover {
+			background:#b1474e;
+			cursor:pointer;
+		}
+		&:active {
+			@include box-shadow(inset 0 0 3px rgba(#000,.7));
+		}
+	}
+	
+// 3- Selectors
+// ------------------------------------------
+
+	.blue-button {
+		@include base-button;
+		
+		border-color:#005b76;
+		@include box-shadow(0 1px 0 rgba(#258fb0,.6));
+		@include background(linear-gradient(#1581a0,#47b5d9));
+	}
+	
+	.red-button {
+		@include base-button;
+		
+		border-color:#872235;
+		@include background(linear-gradient(#96263b,#c44159));
+		@include box-shadow(0 2px rgba(#a02c41,.6));
+	}
+	
+	.menu-button {
+		@include menu-button;
+	}

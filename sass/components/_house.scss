@@ -1,0 +1,29 @@
+// ------------------------------------------
+// This file has styles for house image 
+//
+// author: omar.aljaber@gmail.com
+// ------------------------------------------
+
+// ------------------------------------------
+// table of contents (recommended):
+// ------------------------------------------
+// 1- Importing resources 
+// 2- Selectors
+//    * house
+
+
+// 1- Importing Resources
+// ------------------------------------------
+
+	
+// 2- Selectors
+// ------------------------------------------
+	.house {
+		background:url('../images/house.png') no-repeat transparent;
+		height:373px;
+		top:-100px;
+		position:absolute;
+		width:288px;
+		z-index:14;
+		@include left(30%);
+	}

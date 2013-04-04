@@ -1,0 +1,24 @@
+// ------------------------------------------
+// This file has styles for mountain
+//
+// author: omar.aljaber@gmail.com
+// ------------------------------------------
+
+// ------------------------------------------
+// table of contents (recommended):
+// ------------------------------------------
+// 1- Selectors
+//    * mountain
+
+// 1- Selectors
+// ------------------------------------------
+
+.mountain {
+	background:url('../images/mountain.png') no-repeat transparent;
+	height:188px;
+	position:absolute;
+	top:-145px;
+	width:282px;
+	z-index:3;
+	@include left(19%);
+}

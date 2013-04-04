@@ -1,0 +1,37 @@
+// ------------------------------------------
+// This file has styles for all lighting
+//
+// author: omar.aljaber@gmail.com
+// ------------------------------------------
+
+// ------------------------------------------
+// table of contents (recommended):
+// ------------------------------------------
+// 1- Selectors
+//	  * yellow-lighting
+//    * light-stripes
+
+
+// 1- Selectors
+// ------------------------------------------
+
+.yellow-lighting {
+	background:url('../images/yellow-lighting.png') no-repeat transparent;
+	height:500px;
+	position:absolute;
+	top:-215px;
+	width:500px;
+	z-index:5;
+	@include right(47%);
+}
+
+.light-stripes {
+	background:url('../images/light-stripes.png') no-repeat transparent;
+	height:692px;
+	position:absolute;
+	top:100px;
+	width:970px;
+	z-index:11;
+	@include left(16%);
+	@include opacity(.4);
+}
