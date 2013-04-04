@@ -1,0 +1,57 @@
+// ------------------------------------------
+// This file has styles for green hills
+//
+// author: omar.aljaber@gmail.com
+// ------------------------------------------
+
+// ------------------------------------------
+// table of contents (recommended):
+// ------------------------------------------
+// 1- Mixin
+//    * hill
+	  
+// 2- Selectors
+//    * first-hill
+//    * last-hill
+//    * grace
+
+
+// 1- Mixins 
+// ------------------------------------------
+	@mixin hill {
+		background: url('../images/hill.png') no-repeat;
+		@include background-position(20px,0);
+		bottom:0;
+		height:390px;
+		position:absolute;
+		width:834px;
+	}		
+
+// 2- Selectors
+// ------------------------------------------
+	// Left Hill
+	.first-hill {
+		z-index:8;
+		@include hill;
+		@include left(0);
+		@include rotateY(180deg);
+
+	}
+	
+	// Right Hill
+	.last-hill {
+		z-index:9;
+		@include hill;
+		@include right(0);
+	}
+	
+	// Grace Background
+	.grace {
+		background:url('../images/grace.png') repeat-x transparent;
+		background-size:100% 100%;
+		bottom:0px;
+		height:308px;
+		width:100%;
+		position:absolute;
+		z-index:20;
+	}

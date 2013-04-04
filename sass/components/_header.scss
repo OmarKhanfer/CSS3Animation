@@ -1,0 +1,72 @@
+// ------------------------------------------
+// This file has styles for title area
+//
+// author: omar.aljaber@gmail.com
+// ------------------------------------------
+
+// ------------------------------------------
+// table of contents (recommended):
+// ------------------------------------------
+// 1- Selectors
+
+
+// 1- Selectors
+// ------------------------------------------
+.header {
+	background:#dff2f7;
+	height:30px;
+	position:absolute;
+	width:100%;
+	z-index:20;
+	> div {
+		margin-bottom:5px;
+		text-align:center;
+	}
+	.header__bar {
+		height:40px;
+		background:#dff2f7;
+		padding:0 20%;
+		@include text-align(left);
+		.lang-en {
+			display:none;
+		}
+	}
+	.header__flag {
+		background:url('../images/flag.png') no-repeat transparent;
+		height:19px;
+		margin:0 10px 0 20%;
+		width:19px;
+		@include float(left);
+	}
+	
+	.header__text {
+		color:#929ea3;
+		font-size:8px;
+		font-family:Lucida Sans Unicode;
+		padding-top:5px;
+	}
+	.header__moon {
+		background:url('../images/moon.png');
+		height:50px;
+		margin:15px auto 10px;
+		width:50px;
+	}
+	
+	.header__sub-title {
+		color:#1a6cca;
+		font-family: 'Milonga', cursive;
+		font-size:18px;
+	}
+	
+	.header__title {
+		color:#4c79d6;
+		font-family:'Cinzel Decorative', cursive;
+		font-size:40px;
+		font-weight:bold;
+		text-shadow:-1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff,2px 2px 0 #0470bb;
+	}
+	
+	.menu-button {
+		@include float(right);
+	}
+}

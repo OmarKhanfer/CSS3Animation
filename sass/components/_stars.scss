@@ -1,0 +1,27 @@
+
+// ------------------------------------------
+// This file has styles for balloon image 
+//
+// author: omar.aljaber@gmail.com
+// ------------------------------------------
+
+// ------------------------------------------
+// table of contents (recommended):
+// ------------------------------------------
+// 1- Selectors
+//    * stars
+
+// 1- Selectors
+// ------------------------------------------
+
+.stars {
+	background:url('../images/stars.png') no-repeat transparent;
+	height:124px;
+	margin:0 auto;
+	position:absolute;
+	top:240px;
+	width:820px;
+	z-index:10;
+	@include left(18%);
+	@include opacity(.8);
+}

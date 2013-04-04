@@ -1,0 +1,81 @@
+// ------------------------------------------
+// This file has styles for dividing the main 
+// layout of the page.
+//
+// author: omar.aljaber@gmail.com
+// ------------------------------------------
+
+// ------------------------------------------
+// table of contents (recommended):
+// ------------------------------------------
+// 1- Importing resources 
+//    * imports
+
+// 2- Mixins
+//    * part
+
+// 3- Selectors
+//    * body
+//    * cloud, space, ground
+//    * cloud
+//    * space
+//    * ground
+
+
+// 1- Importing Resources
+// ------------------------------------------
+	@import "commons/imports";
+	
+// 2- Mixins
+// ------------------------------------------
+	@mixin part {
+		bottom:0px;
+		height:387px;
+		position:absolute;
+		width:50%;
+	}
+	
+// 3- Selectors
+// ------------------------------------------
+	body {
+		position:relative;
+	}
+	
+	.cloud,.space,.ground {
+		position:relative;
+	}
+	
+	.cloud {
+		height:120px;
+		z-index:16;
+	}
+	
+	.space {
+		height:354px;
+		position:relative;
+		z-index:2;
+		@include background(linear-gradient(bottom ,
+			#ebdaa4
+			, #38b39f 45%
+			, #00489f 100%),image-url('../images/noise.png'));
+	}
+	
+	.first-part {
+		@include part;
+		@include left(0);
+		@include rotatingY(0deg);
+	}
+	
+	.last-part {
+		@include part;	
+		@include right(0);		
+		@include rotatingY(0deg);		
+	}
+	
+	.ground {
+		height:330px;
+		position:relative;
+		z-index:11;
+	}
+	
+	

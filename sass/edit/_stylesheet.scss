@@ -1,0 +1,42 @@
+// ------------------------------------------
+// This is the main file, here will import  
+// all sass controls files.
+//
+// author: omar.aljaber@gmail.com
+// ------------------------------------------
+
+// ------------------------------------------
+// table of contents (recommended):
+// ------------------------------------------
+// 1- Importing resources 
+// 2- Selectors
+
+
+// 1- Importing Resources
+// ------------------------------------------
+	@import "components/layout";
+	@import "components/header";
+	@import "components/hills";
+	@import "components/house";
+	@import "components/trees";
+	@import "components/clouds";
+	@import "components/balloon";
+	@import "components/snake";	
+	@import "components/stars";	
+	@import "components/mountain";	
+	@import "components/lighting";		
+	
+	@import "ui/popup";	
+	@import "ui/input";		
+	@import "ui/buttons";		
+	
+// 2- Selectors
+// ------------------------------------------
+
+.hide {
+	display:none;
+}
+
+.show {
+	display:block;
+}

@@ -1,0 +1,93 @@
+// ------------------------------------------
+// This file has styles for popup control 
+//
+// author: omar.aljaber@gmail.com
+// ------------------------------------------
+
+// ------------------------------------------
+// table of contents (recommended):
+// ------------------------------------------
+// 1- Variables;
+//	  * default-font
+//    * prefix
+//    * dialog-padding
+//
+// 2- Mixins
+//    * popup
+
+// 3- Selectors
+//	  * popup
+// 1- Variables:
+// ------------------------------------------
+      $default-font: Georgia;
+	  $prefix:popup__;
+	  $dialog-padding:20px;
+
+// 2- Mixins
+// ------------------------------------------
+
+@mixin popup {
+	background-color:rgba(#136c94,.7);
+	border:1px solid #fff;
+	position:absolute;
+	top:238px;
+	z-index:15;
+	@include box-shadow(
+		inset 0 0 29px 5px rgba(#ffffbe,.60)// inner glow
+		, 0 0 21px 4px rgba(#0d85ab,.55) // outer glow
+		);
+	@include left(38%);
+	@include border-radius(30px);
+
+	.#{$prefix}inner {
+		display:block;
+		height:100%;
+		width:100%;
+		@include border-radius(inherit);
+		@include box-shadow(
+			inset 0 -3px 0 rgba(#308c94,.6)
+			, inset 0 0 25px rgba(#fff,.6));	
+	}
+	
+	// $prefix title
+
+	.#{$prefix}title {
+		color:#02203c;
+		display:block;
+		font-family:$default-font;
+ 		font-size:18px;
+		font-style:italic;
+		padding:$dialog-padding;
+		text-align:center;
+		text-shadow:0 1px 0 rgba(#fff,.6);
+	}
+	
+	// popup sub-title
+	.#{$prefix}sub-title {
+		color:#fff;
+		font-family:$default-font;
+		font-size:15px;
+		padding:0 $dialog-padding*2;
+		text-align:center;
+		text-shadow: 0 1px #004261;
+	}
+	
+	.#{$prefix}divider {
+		border-top:1px solid rgba(#ccc,.6);
+		height:1px;
+		margin:15px auto;
+		width:60%;
+//		@include box-shadow(0px -2px 5px 1px rgba(#fff,.8),0px 5px 5px 5px rgba(#147090,.9)); 
+	}
+	
+}
+
+// 3- Selectors
+// ------------------------------------------
+
+.popup {
+	height:260px;
+	width:328px;
+	z-index:100;
+	@include popup;
+}
