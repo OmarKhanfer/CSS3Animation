@@ -2,7 +2,7 @@ CSS3 Animation Demo
 ===================
 
 CSS3 Animation Prototype
-<a href='http://omarkhanfer.github.com/CSS3Animation' target='_blank'>View Prototype</a>
+<a href='http://omarkhanfer.github.com/CSS3Animation/index.html' target='_blank'>View Prototype</a>
 
 <h3>License</h3>
 --------------------------
